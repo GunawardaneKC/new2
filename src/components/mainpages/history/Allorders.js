@@ -105,6 +105,7 @@ const Ord = () => {
                 <thead>
                     <tr>
                         {/* <th></th> */}
+                        <th>Product ID</th>
                         <th>Products</th>
                         <th>Quantity</th>
                         <th>Price</th>
@@ -112,9 +113,10 @@ const Ord = () => {
                 </thead>
                 <tbody>
                     {
-                        orderDetails.cart.map(item =>(
+                        post.cart.map(item =>(
                         <tr key={item._id}>
                             {/* <td><img src={item.images.url} alt="" /></td> */}
+                            <td>{item.product_id}</td>
                             <td>{item.title}</td>
                             <td>{item.quantity}</td>
                             <td>LKR {item.price * item.quantity}</td>
